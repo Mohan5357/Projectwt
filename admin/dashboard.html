@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - THE BOYS Restaurant Admin</title>
+    <link rel="stylesheet" href="../css/admin-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-brand">
+                <h2>THE BOYS</h2>
+                <p>Restaurant Admin</p>
+            </div>
+            <nav class="sidebar-menu">
+                <div class="menu-section">
+                    <div class="menu-section-title">Main</div>
+                    <a href="dashboard.html" class="menu-item active">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="reservations.html" class="menu-item">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Reservations</span>
+                    </a>
+                    <a href="orders.html" class="menu-item">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Orders</span>
+                    </a>
+                </div>
+                <div class="menu-section">
+                    <div class="menu-section-title">Management</div>
+                    <a href="menu-management.html" class="menu-item">
+                        <i class="fas fa-utensils"></i>
+                        <span>Menu Items</span>
+                    </a>
+                    <a href="customers.html" class="menu-item">
+                        <i class="fas fa-users"></i>
+                        <span>Customers</span>
+                    </a>
+                    <a href="reviews.html" class="menu-item">
+                        <i class="fas fa-star"></i>
+                        <span>Reviews</span>
+                    </a>
+                </div>
+                <div class="menu-section">
+                    <div class="menu-section-title">Settings</div>
+                    <a href="settings.html" class="menu-item">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                    <a href="../home.html" class="menu-item">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Top Bar -->
+            <div class="admin-topbar">
+                <div class="topbar-search">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="topbar-actions">
+                    <div class="topbar-icon">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">5</span>
+                    </div>
+                    <div class="admin-user">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="Admin">
+                        <div>
+                            <div style="font-weight: 600; font-size: 0.9rem;">Admin User</div>
+                            <div style="font-size: 0.8rem; color: #666;">Manager</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="admin-content">
+                <div class="content-header">
+                    <h1>Dashboard Overview</h1>
+                    <p>Welcome back! Here's what's happening today.</p>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div>
+                                <div class="stat-value">₹45,280</div>
+                                <div class="stat-label">Today's Revenue</div>
+                            </div>
+                            <div class="stat-icon primary">
+                                <i class="fas fa-rupee-sign"></i>
+                            </div>
+                        </div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 12% from yesterday
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div>
+                                <div class="stat-value">28</div>
+                                <div class="stat-label">Reservations Today</div>
+                            </div>
+                            <div class="stat-icon success">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                        </div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 8 more than yesterday
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div>
+                                <div class="stat-value">156</div>
+                                <div class="stat-label">Orders Completed</div>
+                            </div>
+                            <div class="stat-icon warning">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                        </div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 15% increase
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div>
+                                <div class="stat-value">4.8</div>
+                                <div class="stat-label">Average Rating</div>
+                            </div>
+                            <div class="stat-icon info">
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 0.2 points up
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Reservations -->
+                <div class="data-table-container">
+                    <div class="table-header">
+                        <h3>Recent Reservations</h3>
+                        <a href="reservations.html" class="btn btn-primary btn-sm">View All</a>
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Customer Name</th>
+                                <th>Date & Time</th>
+                                <th>Guests</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#1247</td>
+                                <td>Jay Memakiya</td>
+                                <td>Nov 5, 2024 - 7:30 PM</td>
+                                <td>2 People</td>
+                                <td><span class="status-badge confirmed">Confirmed</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#1246</td>
+                                <td>Sujen Ramani</td>
+                                <td>Nov 5, 2024 - 8:00 PM</td>
+                                <td>3 People</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#1245</td>
+                                <td>Mahipalsinh Jadeja</td>
+                                <td>Nov 5, 2024 - 6:00 PM</td>
+                                <td>6 People</td>
+                                <td><span class="status-badge confirmed">Confirmed</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#1244</td>
+                                <td>Meet Vekariya</td>
+                                <td>Nov 4, 2024 - 7:00 PM</td>
+                                <td>2 People</td>
+                                <td><span class="status-badge cancelled">Cancelled</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary">View</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

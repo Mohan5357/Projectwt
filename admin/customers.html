@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers - THE BOYS Restaurant Admin</title>
+    <link rel="stylesheet" href="../css/admin-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <div class="sidebar-brand">
+                <h2>THE BOYS</h2>
+                <p>Restaurant Admin</p>
+            </div>
+            <nav class="sidebar-menu">
+                <div class="menu-section">
+                    <div class="menu-section-title">Main</div>
+                    <a href="dashboard.html" class="menu-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </div>
+                <div class="menu-section">
+                    <div class="menu-section-title">Management</div>
+                    <a href="menu-management.html" class="menu-item">
+                        <i class="fas fa-utensils"></i>
+                        <span>Menu Items</span>
+                    </a>
+                    <a href="customers.html" class="menu-item active">
+                        <i class="fas fa-users"></i>
+                        <span>Customers</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="admin-main">
+            <div class="admin-topbar">
+                <div class="topbar-search">
+                    <input type="text" placeholder="Search customers...">
+                </div>
+                <div class="topbar-actions">
+                    <div class="admin-user">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="Admin">
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-content">
+                <div class="content-header">
+                    <h1>Customer Database</h1>
+                    <p>View and manage customer information</p>
+                </div>
+
+                <div class="data-table-container">
+                    <div class="table-header">
+                        <h3>All Customers</h3>
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Total Orders</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>jay Memakiya</td>
+                                <td>jaymemakiya@email.com</td>
+                                <td>+91 98765 43210</td>
+                                <td>24</td>
+                                <td><button class="btn btn-sm btn-primary">View</button></td>
+                            </tr>
+                            <tr>
+                                <td>Sujen Ramani</td>
+                                <td>sepatel@email.com</td>
+                                <td>+91 98765 43211</td>
+                                <td>18</td>
+                                <td><button class="btn btn-sm btn-primary">View</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

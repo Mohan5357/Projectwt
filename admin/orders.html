@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders - THE BOYS Restaurant Admin</title>
+    <link rel="stylesheet" href="../css/admin-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <div class="sidebar-brand">
+                <h2>THE BOYS</h2>
+                <p>Restaurant Admin</p>
+            </div>
+            <nav class="sidebar-menu">
+                <div class="menu-section">
+                    <div class="menu-section-title">Main</div>
+                    <a href="dashboard.html" class="menu-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="reservations.html" class="menu-item">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Reservations</span>
+                    </a>
+                    <a href="orders.html" class="menu-item active">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Orders</span>
+                    </a>
+                </div>
+                <div class="menu-section">
+                    <div class="menu-section-title">Management</div>
+                    <a href="menu-management.html" class="menu-item">
+                        <i class="fas fa-utensils"></i>
+                        <span>Menu Items</span>
+                    </a>
+                    <a href="customers.html" class="menu-item">
+                        <i class="fas fa-users"></i>
+                        <span>Customers</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="admin-main">
+            <div class="admin-topbar">
+                <div class="topbar-search">
+                    <input type="text" placeholder="Search orders...">
+                </div>
+                <div class="topbar-actions">
+                    <div class="admin-user">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="Admin">
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-content">
+                <div class="content-header">
+                    <h1>Orders Management</h1>
+                    <p>Track and manage all customer orders</p>
+                </div>
+
+                <div class="data-table-container">
+                    <div class="table-header">
+                        <h3>Recent Orders</h3>
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Items</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#ORD-1523</td>
+                                <td>Bhavya Patel</td>
+                                <td>Vada Pav</td>
+                                <td>₹680</td>
+                                <td><span class="status-badge confirmed">Completed</span></td>
+                                <td><button class="btn btn-sm btn-primary">View</button></td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-1522</td>
+                                <td>Mitesh Pipariya</td>
+                                <td>Pav Bhaji</td>
+                                <td>₹420</td>
+                                <td><span class="status-badge pending">Processing</span></td>
+                                <td><button class="btn btn-sm btn-primary">View</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

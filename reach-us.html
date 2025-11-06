@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | THE BOYS Restaurant</title>
+    <link rel="stylesheet" href="css/main-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contact-form {
+            background: var(--white-pure);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-medium);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--maroon-primary);
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition-smooth);
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold-accent);
+        }
+        .contact-info-card {
+            background: var(--cream-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="main-navigation">
+        <div class="nav-container">
+            <a href="home.html" class="brand-logo">THE BOYS <span>Restaurant</span></a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="story.html">Our Story</a></li>
+                <li><a href="dishes.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="reach-us.html" class="active">Contact</a></li>
+                <li><a href="reserve.html">Reserve Table</a></li>
+                <li><a href="admin-login.html" class="admin-btn-nav">Admin</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <section class="hero-banner" style="height: 60vh;">
+        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1920&q=80" alt="Contact" class="hero-background">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle">Get In Touch</p>
+            <h1 class="hero-title">Contact Us</h1>
+            <p class="hero-description">We'd love to hear from you</p>
+        </div>
+    </section>
+
+    <section class="section-wrapper">
+        <div class="section-container">
+            <div class="story-grid">
+                <div class="story-content">
+                    <div class="contact-info-card">
+                        <h3 style="margin-bottom: 1rem;"><i class="fas fa-map-marker-alt" style="color: var(--gold-accent);"></i> Visit Us</h3>
+                        <p>42 Heritage Lane, Colaba<br>Mumbai, Maharashtra 400001</p>
+                    </div>
+                    <div class="contact-info-card">
+                        <h3 style="margin-bottom: 1rem;"><i class="fas fa-phone" style="color: var(--gold-accent);"></i> Call Us</h3>
+                        <p>Main: +91 98765 43210<br>Events: +91 98765 43211</p>
+                    </div>
+                    <div class="contact-info-card">
+                        <h3 style="margin-bottom: 1rem;"><i class="fas fa-envelope" style="color: var(--gold-accent);"></i> Email Us</h3>
+                        <p>hello@theboysrestaurant.com<br>events@thboysrestaurant.com</p>
+                    </div>
+                    <div class="contact-info-card">
+                        <h3 style="margin-bottom: 1rem;"><i class="fas fa-clock" style="color: var(--gold-accent);"></i> Opening Hours</h3>
+                        <p>Mon-Fri: 11:00 AM - 10:30 PM<br>Sat-Sun: 10:00 AM - 11:00 PM</p>
+                    </div>
+                </div>
+                <div class="story-content">
+                    <!-- ✅ FORM UPDATED TO SEND EMAIL USING FORMSPREE -->
+                    <form class="contact-form" action="https://formspree.io/f/xvgvedkr" method="POST">
+                        <h3 style="margin-bottom: 2rem;">Send Us a Message</h3>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-wrapper" style="background: var(--cream-bg);">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Find Us on the Map</h2>
+            </div>
+            <div style="width: 100%; height: 450px; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-medium);">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.2157!2d72.8311!3d18.9220!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDU1JzE5LjIiTiA3MsKwNDknNTIuMCJF!5e0!3m2!1sen!2sin!4v1234567890" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>THE BOYS Restaurant</h4>
+                <p>Bringing authentic Indian flavors to Mumbai since 2012.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="story.html">Our Story</a></li>
+                    <li><a href="dishes.html">Menu</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2024 Mohan Restaurant.</p></div>
+    </footer>
+
+    <script>
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // ✅ Optional Success Alert
+        document.querySelector(".contact-form").addEventListener("submit", function(){
+            alert("✅ Thank you! Your message has been sent successfully.");
+        });
+    </script>
+
+</body>
+</html>

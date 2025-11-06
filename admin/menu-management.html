@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Management - THE BOYS Restaurant Admin</title>
+    <link rel="stylesheet" href="../css/admin-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <div class="sidebar-brand">
+                <h2>THE BOYS</h2>
+                <p>Restaurant Admin</p>
+            </div>
+            <nav class="sidebar-menu">
+                <div class="menu-section">
+                    <div class="menu-section-title">Main</div>
+                    <a href="dashboard.html" class="menu-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="reservations.html" class="menu-item">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Reservations</span>
+                    </a>
+                </div>
+                <div class="menu-section">
+                    <div class="menu-section-title">Management</div>
+                    <a href="menu-management.html" class="menu-item active">
+                        <i class="fas fa-utensils"></i>
+                        <span>Menu Items</span>
+                    </a>
+                    <a href="customers.html" class="menu-item">
+                        <i class="fas fa-users"></i>
+                        <span>Customers</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="admin-main">
+            <div class="admin-topbar">
+                <div class="topbar-search">
+                    <input type="text" placeholder="Search menu items...">
+                </div>
+                <div class="topbar-actions">
+                    <div class="admin-user">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="Admin">
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-content">
+                <div class="content-header">
+                    <h1>Menu Management</h1>
+                    <p>Add, edit, or remove menu items</p>
+                </div>
+
+                <div class="data-table-container">
+                    <div class="table-header">
+                        <h3>Menu Items</h3>
+                        <button class="btn btn-primary btn-sm">
+                            <i class="fas fa-plus"></i> Add New Item
+                        </button>
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Item Name</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Butter Chicken</td>
+                                <td>Main Course</td>
+                                <td>₹280</td>
+                                <td><span class="status-badge confirmed">Available</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary">Edit</button>
+                                    <button class="btn btn-sm btn-danger">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Paneer Tikka Masala</td>
+                                <td>Main Course</td>
+                                <td>₹240</td>
+                                <td><span class="status-badge confirmed">Available</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary">Edit</button>
+                                    <button class="btn btn-sm btn-danger">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

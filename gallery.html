@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | THE BOYS Restaurant</title>
+    <link rel="stylesheet" href="css/main-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition-smooth);
+        }
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-medium);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="main-navigation">
+        <div class="nav-container">
+            <a href="home.html" class="brand-logo">THE BOYS <span>Restaurant</span></a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="story.html">Our Story</a></li>
+                <li><a href="dishes.html">Menu</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="reach-us.html">Contact</a></li>
+                <li><a href="reserve.html">Reserve Table</a></li>
+                <li><a href="admin-login.html" class="admin-btn-nav">Admin</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <section class="hero-banner" style="height: 60vh;">
+        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1920&q=80" alt="Gallery" class="hero-background">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle">Visual Journey</p>
+            <h1 class="hero-title">Our Gallery</h1>
+            <p class="hero-description">A glimpse into our culinary world</p>
+        </div>
+    </section>
+
+    <section class="section-wrapper">
+        <div class="section-container">
+            <div class="section-header">
+                <p class="section-subtitle">Moments Captured</p>
+                <h2 class="section-title">Experience THE BOYS Restaurant</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/1.jpeg" alt="Restaurant Interior">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/2.jpeg" alt="Butter Chicken">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/3.jpeg" alt="Dining Experience">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/4.jpeg" alt="Biryani">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/5.jpeg" alt="Restaurant Ambiance">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/6.jpeg" alt="Palak Paneer">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/7.jpeg" alt="Food Preparation">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/8.jpeg" alt="Indian Thali">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/9.jpeg" alt="Fresh Ingredients">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>THE BOYS Restaurant</h4>
+                <p>Bringing authentic Indian flavors to Mumbai since 2012.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="story.html">Our Story</a></li>
+                    <li><a href="dishes.html">Menu</a></li>
+                    <li><a href="reach-us.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Visit Us</h4>
+                <p><i class="fas fa-map-marker-alt" style="color: var(--gold-accent);"></i> 42 Heritage Lane, Mumbai 400001</p>
+                <p><i class="fas fa-phone" style="color: var(--gold-accent);"></i> +91 98765 43210</p>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2024 THE BOYS Restaurant.</p></div>
+    </footer>
+
+    <script>
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("oInCNnneYmVqjYQ8q"); // ✅ your EmailJS public key
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve Table | THE BOYS Restaurant</title>
+    <link rel="stylesheet" href="css/main-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .reservation-form {
+            background: var(--white-pure);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-medium);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--maroon-primary);
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition-smooth);
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold-accent);
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        @media (max-width: 640px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    <nav class="main-navigation">
+        <div class="nav-container">
+            <a href="home.html" class="brand-logo">THE BOYS <span>Restaurant</span></a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="story.html">Our Story</a></li>
+                <li><a href="dishes.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="reach-us.html">Contact</a></li>
+                <li><a href="reserve.html" class="active">Reserve Table</a></li>
+                <li><a href="admin-login.html" class="admin-btn-nav">Admin</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <section class="hero-banner" style="height: 60vh;">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&q=80" alt="Reserve" class="hero-background">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle">Book Your Experience</p>
+            <h1 class="hero-title">Reserve a Table</h1>
+            <p class="hero-description">Join us for an unforgettable dining experience</p>
+        </div>
+    </section>
+
+    <section class="section-wrapper">
+        <div class="section-container">
+            <form id="reservationForm">
+                <h3 style="margin-bottom: 2rem; text-align: center;">Make Your Reservation</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Date *</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time *</label>
+                        <select id="time" required>
+                            <option value="">Select Time</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="13:00">1:00 PM</option>
+                            <option value="14:00">2:00 PM</option>
+                            <option value="19:00">7:00 PM</option>
+                            <option value="20:00">8:00 PM</option>
+                            <option value="21:00">9:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Number of Guests *</label>
+                    <select id="guests" required>
+                        <option value="">Select Guests</option>
+                        <option value="1">1 Person</option>
+                        <option value="2">2 People</option>
+                        <option value="3">3 People</option>
+                        <option value="4">4 People</option>
+                        <option value="5">5 People</option>
+                        <option value="6">6+ People</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="requests">Special Requests</label>
+                    <textarea id="requests" rows="4" placeholder="Any dietary requirements, celebrations, or special requests..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%;">Confirm Reservation</button>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-gray); font-size: 0.9rem;">
+                    We'll send you a confirmation email shortly
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>THE BOYS Restaurant</h4>
+                <p>Bringing authentic Indian flavors to Mumbai since 2012.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="story.html">Our Story</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2024 THE BOYS Restaurant.</p></div>
+    </footer>
+
+    <script>
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // ✅ EMAILJS RESERVATION SCRIPT
+        document.getElementById('reservationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const bookingCode = "BOYS" + Math.floor(100000 + Math.random() * 900000);
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                date: document.getElementById('date').value,
+                time: document.getElementById('time').value,
+                guests: document.getElementById('guests').value,
+                requests: document.getElementById('requests').value,
+                code: bookingCode
+            };
+
+            emailjs.send("service_ge4t4uf", "template_u5cf2o6", formData)
+            .then(() => {
+                alert("✅ Reservation confirmed! Your code is: " + bookingCode);
+                document.getElementById('reservationForm').reset();
+            })
+            .catch((error) => {
+                console.error("❌ Error:", error);
+                alert("❌ Error sending email. Please check your connection or EmailJS setup.");
+            });
+        });
+    </script>
+
+</body>
+</html>
