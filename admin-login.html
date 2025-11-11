@@ -68,12 +68,12 @@
       const pass = document.getElementById('password').value;
 
       // Set your admin credentials here
-      const adminUser = "admin";
+      const adminUser = "mohan";
       const adminPass = "12345";
 
       if (user === adminUser && pass === adminPass) {
         localStorage.setItem("isAdmin", "true");
-        window.location.href = "dashboard.html";
+        window.location.href = "admin/reservations.html";
       } else {
         document.getElementById('error').textContent = "Invalid username or password!";
       }
